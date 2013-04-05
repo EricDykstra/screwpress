@@ -1,17 +1,22 @@
 <div class="container">
   <h1>Welcome to the Screwpress Blog Engine!</h1>
   <h2>The best blog engine on the planet</h2>
-  <a href="/write"><button>Write Post??</a></button>
+  <a class="writequestionmark" href="/write">    Write Post    </a>
   <% if @posted %>
-  <p>Thank you for posting the blog entitled <em>"<%= @posted.title %>"</em>.</p>
+  <p>Thank you for posting the blog entitled <em>"<%= @posted.title %>"</em>,
+    <%= @posted.author %>, I and the blog readership community value
+    your contribution with the fire of 1,000 suns.</p>
   <% end %>
   <% if @posts %>
-    <% @posts.reverse.each do |post| %>
+    <% @posts.reverse[0..4].each do |post| %>
       <hr>
       <div class="indiv_post">
-        <h3><%= post.title %></h3>
+        <h3><a href="post/<%= post.id %>"><%= post.title %></a></h3>        <form style="float:right;" method="post" action="/delete/<%= post.id%>">
+          <button type="submit" style="display:block; opacity:.5">Delete</button>
+        </form> 
         <h4><%= post.author %></h4>
         <article><%= post.text %></article>
+
       </div>
 
     <% end %>

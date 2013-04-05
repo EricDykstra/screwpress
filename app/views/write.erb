@@ -1,9 +1,12 @@
 <div class="container">
   <h1>Write a post please</h1>
-  <form method="post" action="/write">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="author" placeholder="Author">
-    <input type="text" name="text" placeholder="Content goes here">
-    <button type="submit">Post this</button>
-  </form>
+  <div class="formcontainer">
+    <form method="post" action="/write">
+      <input type="text" name="title" placeholder="Title">
+      <input type="text" name="author" placeholder="Author">
+      <textarea type="text" name="text" rows="4" cols="59" width=600px placeholder="Content goes here"></textarea>
+      <input id="post_tags" name="tags" placeholder="comma, separated, tags">
+      <button type="submit">Post this</button>
+    </form>
+  </div>
 </div>

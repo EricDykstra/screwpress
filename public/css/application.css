@@ -1,9 +1,108 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #402F3F;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+h3 {
+    font-size: 1.3em;
+}
+
+.formcontainer {
+    height:230px;
+}
+
+.writequestionmark {    
+    color: #560F2A;
+    font-size:1.9em;
+    background: rgba(255,255,255,.7);
+    margin:0 auto;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+    border: 1px solid black;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input {
+    float:left;
+    width:100%;
+    margin: 3px 3px 3px 0;
+    background: #fdfdfd;
+}
+
+button {
+    float:left;
+    border-radius:6px;
+    background: white;
+    box-shadow: 0px 0px 3px black;
+    margin-top:3px;
+}
+
 .container {
   margin: 20px auto;
-  width: 960px;
+  width: 550px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 2px dotted #550808;
+  background: #D0CB93;
 }
+
 th {
   text-align: left;
+}
+
+.indiv_post h3 a {
+    text-decoration: underline;
+    line-height:4px;
+    color: #333;
+}
+
+.indiv_post h4 {
+    font-style: italic;
+    line-height:1px;
+}
+
+article {
+    background: rgba(255,255,255,.6);
+    border: 1px dotted rgba(0,0,0,.1);
+    padding: 5px;
+    box-shadow: 2px 2px rgba(0,0,0,.5);
+}
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin: 40px 0 20px;
+}
+
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+a {
+    color: #222
 }
